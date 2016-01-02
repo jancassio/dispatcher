@@ -1,6 +1,7 @@
 # Dispatcher
 
-[![Twitter: @jancassio](https://img.shields.io/badge/contact-@jancassio-blue.svg?style=flat)](https://twitter.com/jancassio)
+[![Twitter: @jancassio](https://img.shields.io/badge/contact-@jancassio-blue.svg)](https://twitter.com/jancassio)
+[![npm version](https://badge.fury.io/js/%40jancassio%2Fdispatcher.svg)](https://www.npmjs.com/package/@jancassio/dispatcher)
 
 A very simple, lightweight and easy-to-use dispatcher object.
 
