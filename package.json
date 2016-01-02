@@ -1,0 +1,18 @@
+{
+  "name": "dispatcher",
+  "version": "1.0.0",
+  "description": "A lightweight dispatcher object for general usage.",
+  "main": "dispatcher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "dispatcher",
+    "event",
+    "callback"
+  ],
+  "author": "Jan Cassio <hey@jancassio.com> (http://jancassio.com)",
+  "license": "MIT"
+}
