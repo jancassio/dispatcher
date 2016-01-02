@@ -1,5 +1,5 @@
 {
-  "name": "dispatcher",
+  "name": "@jancassio/dispatcher",
   "version": "1.0.0",
   "description": "A lightweight dispatcher object for general usage.",
   "main": "dispatcher.js",
