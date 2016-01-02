@@ -5,13 +5,23 @@
 
 A very simple, lightweight and easy-to-use dispatcher object.
 
-## Why another dispatcher
+## Why another dispatcher?
 
-1. So many features you probably don't (or never) use.
+There are my reasons to re-invent a dispatcher object for javascript projects.
+
+1. So many features probably you don't (or never) use.
 2. Heavy file output.
-3. Not flexible.
+3. Not so easy to extend or not flexible.
 4. Dependencies.
 5. Needs some compiler/transpiler to use with ES5 (classic javascript syntax).
+
+## What this dispatcher is?
+
+1. Enough features, only emit, listen and unlisten events.
+2. Lightweight for any kind of project.
+3. Easy to extend, pretty simple flexibility.
+4. Zero dependencies.
+5. Works perfectly in ES5 and ES6.
 
 ## Usages
 
@@ -29,6 +39,9 @@ function onEventGo (event) {
     'event.type: ', event.type,
     'event.payload', event.payload
   )
+  
+  // For unlisten/unsubscribe event. 
+  Dispatcher.off( EVENT_GO, this.onEventGO );
 }
 
 // An action to emit event.
@@ -37,7 +50,7 @@ function sendEvent () {
 }
 
 // Register onEventGo to be called when 'event.go' be emitted.
-Dispatcher.on(EVENT_GO, onEventGo);
+Dispatcher.on(EVENT_GO, this.onEventGo);
 
 // send the event after 1 second
 setTimeout(this.sendEvent.bind(this), 1000);
@@ -96,8 +109,9 @@ for (var i = 100; i > 0; i--) {
 ```
 
 ## Contribution
-I really like to receive feedbacks. Bugs, features, etc are welcome. I just want
-to make sure, this dispatcher is helpful.
+I really like to receive feedbacks. Bugs, features, etc, are always welcome.
+I just want to make sure, this dispatcher is helpful and works as excpected to
+everyone.
 
 ## License
 ### MIT
