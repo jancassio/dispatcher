@@ -18,7 +18,7 @@ A very simple, lightweight and easy-to-use dispatcher object.
 Here is the most simple way
 
 ```javascript
-Dispatcher = require('dispatcher');
+import Dispatcher from '@jancassio/dispatcher';
 
 // Constant to be reused in event types, useful to avoid typos, across usage.
 const EVENT_GO = 'event.go';
@@ -47,7 +47,7 @@ setTimeout(this.sendEvent.bind(this), 1000);
 Sometimes, you want to extend to be part of your structure, no problem.
 
 ```javascript
-Dispatcher = require('dispatcher');
+import Dispatcher from '@jancassio/dispatcher';
 
 function MyClass () {}
 
@@ -61,7 +61,7 @@ Some situations require to handle many emitters with a single handlers, also
 you need to flag _"who is emitting an event?"_, ok here is.
 
 ```javascript
-Dispatcher = require('dispatcher');
+import Dispatcher from '@jancassio/dispatcher';
 
 // Constant to be reused in event types, useful to avoid typos, across usage.
 // ES6 classProperties module available only
