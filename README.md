@@ -26,7 +26,7 @@ const EVENT_GO = 'event.go';
 function onEventGo (event) {
   console.log('[ onEventGo ]',
     'event.type: ', event.type,
-    'event.payload', payload
+    'event.payload', event.payload
   )
 }
 
@@ -72,7 +72,7 @@ var EVENT_GO = (id = 0) => { return `event.go.${id}` };
 function onEventGo (event) {
   console.log('[ onEventGo ]',
     'event.type: ', event.type,
-    'event.payload', payload
+    'event.payload', event.payload
   )
 }
 
