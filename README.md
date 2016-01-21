@@ -3,7 +3,7 @@
 [![Twitter: @jancassio](https://img.shields.io/badge/contact-@jancassio-blue.svg)](https://twitter.com/jancassio)
 [![npm version](https://badge.fury.io/js/%40jancassio%2Fdispatcher.svg)](https://www.npmjs.com/package/@jancassio/dispatcher)
 
-A very simple, lightweight and easy-to-use dispatcher object.
+This is a very simple, lightweight and easy-to-use dispatcher object.
 
 ## Why another dispatcher?
 
@@ -13,7 +13,7 @@ There are my reasons to re-invent a dispatcher object for javascript projects.
 2. Heavy file output.
 3. Not so easy to extend or not flexible.
 4. Dependencies.
-5. Needs some compiler/transpiler to use with ES5 (classic javascript syntax).
+5. Need a compiler/transpiler to use with ES5 (classic javascript syntax).
 
 ## What this dispatcher is?
 
@@ -23,9 +23,9 @@ There are my reasons to re-invent a dispatcher object for javascript projects.
 4. Zero dependencies.
 5. Works perfectly in ES5 and ES6.
 
-## Usages
+## Usage
 
-Here is the most simple way
+Here is the most simple way:
 
 ```javascript
 import Dispatcher from '@jancassio/dispatcher';
@@ -57,7 +57,7 @@ setTimeout(this.sendEvent.bind(this), 1000);
 
 ```
 
-Sometimes, you want to extend to be part of your structure, no problem.
+Sometimes, you want to extend to be part of your structure or a context, no problemo.
 
 ```javascript
 import Dispatcher from '@jancassio/dispatcher';
@@ -70,8 +70,8 @@ MyClass.prototype = Object.create(Dispatcher, {
 
 ```
 
-Some situations require to handle many emitters with a single handlers, also
-you need to flag _"who is emitting an event?"_, ok here is.
+Some situations require to handle many emitters in a single handler, also
+you need to flag _"who is emitting an event?"_, ok here is a simple example.
 
 ```javascript
 import Dispatcher from '@jancassio/dispatcher';
@@ -96,10 +96,6 @@ function sendEvent (id) {
 }
 
 // Register onEventGo to be called when 'event.go' be emitted.
-
-
-// Dirty simple example of emit many events to a single handler with
-// a event identifier.
 
 for (var i = 100; i > 0; i--) {
   Dispatcher.on(EVENT_GO(i), onEventGo);
